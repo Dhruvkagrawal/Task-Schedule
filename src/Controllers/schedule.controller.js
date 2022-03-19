@@ -15,7 +15,7 @@ router.post("", async (req, res) => {
     let mth = date.getMonth();
     let day = date.getDay();
 
-    schedule1.scheduleJob(`job`, `${(min, hrs, dte, mth, day)}`, () => {
+    schedule1.scheduleJob(`job`, `${(0, min, hrs, dte, mth, day)}`, () => {
       let test = req.query.text;
       setTimeout(() => {
         test = test.split("").reverse().join("");
